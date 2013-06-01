@@ -1,0 +1,205 @@
+<?xml version="1.0"?><api><query><pages><page pageid="2391" ns="0" title="Pidgey"><revisions><rev xml:space="preserve">{{PokémonPrevNext|prev=Beedrill|next=Pidgeotto}}
+{{PokéBox
+|border    = {{Flying}}
+|backcolor = {{Normal}}
+|name      = Pidgey
+|jname     = (ポッポ ''Poppo'')
+|ndex      = 016
+|evofrom   = None
+|evointo   = [[Pidgeotto]]
+|gen       = [[Generation I]]
+|pronun    = &lt;math&gt;PIH-jee&lt;/math&gt;
+|hp        = 40
+|atk       = 45
+|def       = 40
+|satk      = 35
+|sdef      = 35
+|spd       = 56
+|total     = 251
+|species   = Tiny Bird Pokémon
+|type      = {{type|Normal}}/{{type|Flying}}
+|height    = &lt;span class=&quot;explain&quot; title=&quot;0.3 m&quot;&gt;1'00&quot;&lt;/span&gt;
+|weight    = &lt;span class=&quot;explain&quot; title=&quot;1.8kg&quot;&gt;4.0 lbs&lt;/span&gt;
+|ability   = [[Keen Eye]]&lt;br&gt;[[Tangled Feet]]&lt;br&gt;[[Big Pecks]] ([[Dream World]])
+|color     = &lt;span style=&quot;color:brown;&quot;&gt;'''Brown'''&lt;/span&gt;
+|gender    = &lt;span  class=&quot;female&quot;&gt;50% ♀&lt;/span&gt;/&lt;span class=&quot;male&quot;&gt;50% ♂&lt;/span&gt;
+}}
+'''Pidgey''' (Japanese: '''ポッポ''' ''Poppo'') is a {{type|Normal}}/{{type|Flying}}-[[Types|type]] [[Pokémon (species)|Pokémon]] introduced in [[Generation I]].
+
+== Appearance ==
+[[File:Oak's Pidgey.png|thumb|right.|A Pidgey with Professor Oak.]]
+Pidgey resembles a small, plump-bodied bird. It is a brown color, with a lighter colored throat and belly. The tips of its wings share this cream color. Both its feet and beak are a pinkish-gray color. Its plumage is fairly nondescript, particularly compared to its evolutions, Pidgeotto and Pidgeot. It has black markings around its eyes and a small crest of brown and cream feathers above its eyes. It resembles other small flying-type Pokémon, such as [[Starly]], [[Taillow]], and [[Spearow]]. However, due to the fact that these Pokémon tend to be unique to a region, with the exception of Spearow, it is likely that they are a result of convergent evolution. Pidgey's feet allow it to walk on the ground for a while, but can also reach out and safely land on perches.
+
+== Special abilities ==
+When on the ground, Pidgey flaps its wings to kick up sand and dust that blinds its opponents. It has an excellent sense of direction and homing instincts. It can locate its nest even when far removed from familiar surroundings. These skills enable to be easily trained to deliver messages.
+
+== In the anime ==
+Pidgeys often appear in the [[Pokémon Anime|anime series]]. They debuted in the first episode, ''[[IL001: Pokémon - I Choose You!|Pokémon - I Choose You!]]'', where [[Ash Ketchum]] had attempted to catch one without [[Ash's Pikachu|Pikachu]]'s help. He later mistook a [[Spearow]] for a Pidgey, which caused a flock of [[Spearow]] to chase him.
+
+Pidgey later appeared as the main Pokémon in ''[[JE095: Fly Me to the Moon|Fly Me to the Moon]]'', where Ash and friends find an island of fat Pidgey that could not fly.
+
+== Evolution ==
+Pidgey [[Evolution|evolves]] into [[Pidgeotto]] at level 18, Then it evolves into [[Pidgeot]] at level 36.
+
+
+== Game info ==
+=== Locations ===
+{{Game Locations
+|backcolor           = {{Normal}}
+|pokemon             = Pidgey
+|redblue             = Routes [[Kanto Route 1|1]], [[Kanto Route 2|2]], [[Kanto Route 3|3]], [[Kanto Route 5|5]], [[Kanto Route 6|6]], [[Kanto Route 7|7]], [[Kanto Route 8|8]], [[Kanto Route 12|12]], [[Kanto Route 13|13]], [[Kanto Route 14|14]], [[Kanto Route 15|15]], [[Kanto Route 21|21]], [[Route 24|24]], [[Route 25|25]]
+|rbrarity            = Common
+|yellow              = Routes [[Kanto Route 1|1]], [[Kanto Route 2|2]], [[Kanto Route 5|5]], [[Kanto Route 6|6]], [[Kanto Route 7|7]], [[Kanto Route 8|8]], [[Kanto Route 11|11]], [[Kanto Route 12|12]], [[Kanto Route 13|13]], [[Kanto Route 21|21]], [[Route 24|24]], [[Route 25|25]], [[Viridian Forest]]
+|yrarity             = Common
+|goldsilver          = Routes [[Kanto Route 1|1]], [[Kanto Route 2|2]], [[Kanto Route 5|5]], [[Route 25|25]], [[Route 29|29]], [[Route 30|30]], [[Route 31|31]], [[Route 32|32]], [[Route 34|34]], [[Route 35|35]], [[Route 36|36]], [[Route 37|37]], [[National Park]]
+|gsrarity            = Common
+|crystal             = Routes [[Kanto Route 1|1]], [[Kanto Route 2|2]], [[Kanto Route 5|5]], [[Route 25|25]], [[Route 29|29]], [[Route 30|30]], [[Route 31|31]], [[Route 35|35]], [[Route 36|36]], [[Route 37|37]], [[National Park]], [[Ilex Forest]]
+|crarity             = Common
+|rubysapphire        = [[Trade]]
+|rsrarity            = None
+|emerald             = [[Trade]]
+|erarity             = None
+|fireredleafgreen    = Routes [[Kanto Route 1|1]], [[Kanto Route 2|2]], [[Kanto Route 5|5]], [[Kanto Route 6|6]], [[Kanto Route 7|7]], [[Kanto Route 8|8]], [[Kanto Route 11|11]], [[Kanto Route 12|12]], [[Kanto Route 13|13]], [[Kanto Route 21|21]], [[Route 24|24]], [[Route 25|25]], [[Viridian Forest]], [[Bond Bridge]], [[Berry Forest]], [[Five Isle Meadow]]
+|frlgrarity          = Common
+|diamondpearl        = [[Route 229]]
+|dprarity            = Swarm
+|platinum            = [[Route 229]]
+|ptrarity            = Uncommon
+|heartgoldsoulsilver = Routes [[Kanto Route 1|1]], [[Kanto Route 2|2]], [[Kanto Route 5|5]], [[Kanto Route 6|6]], [[Route 25|25]], [[Route 29|29]], [[Route 30|30]], [[Route 31|31]], [[Route 35|35]], [[Route 36|36]], [[Route 37|37]], [[National Park]], [[Viridian Forest]]
+|hgssrarity          = Common
+|blackwhite          = [[White Forest]] (White only)
+|bwrarity            = Common
+}}
+
+=== Spin-off game locations ===
+{{Side Game Locations
+|backcolor = {{Normal}}
+|Pokemon   = Pidgey
+|Snap      = Beach
+|Channel   = Viridian Forest
+|Trozei    = Endless Level 14, Endless Level 33, Forever Level 14, Mr. Who's Den
+|PMD1      = [[Tiny Woods]] (1F-3F), [[Howling Forest]] (9F-13F)
+|PMD2      = [[Concealed Ruins]] (B1F-B9F), [[World Abyss]] (B1F-B15F)
+|Rumble    = Cold Meadow
+}}
+
+=== Pokédex entries ===
+{{GenIPokédex
+|backcolor  = {{Normal}}
+|redblue    = A common sight in forests and woods. It flaps its wings at ground level to kick up blinding sand.
+|yellow     = Very docile. If attacked, it will often kick up sand to protect itself rather than fight back.
+|gold       = It usually hides in tall grass. Because it dislikes fighting, it protects itself by kicking up sand.
+|silver     = Common in grassy areas and forests, it is very docile and will chase off enemies by flapping up sand.
+|crystal    = It rapidly flaps its wings in the grass, stirring up a dust cloud that drives insect prey out into the open.
+|ruby       = Pidgey has an extremely sharp sense of direction. It is capable of unerringly returning home to its nest, however far it may be removed from its familiar surroundings.
+|sapphire   = Pidgey has an extremely sharp sense of direction. It is capable of unerringly return home to its nest, however far it may be removed from its familiar surroundings.
+|emerald    = It has an extremely sharp sense of direction. It can unerringly return home to its nest, however far it may be removed from its familiar surroundings.
+|firered    = Does not like to fight. It hides in tall grass and so on, foraging for food such as small bugs.
+|leafgreen  = A common sight in forests and woods. It flaps its wings and ground level to kick up blinding sand.
+|diamond    = It is docile and prefers to avoid conflict. If disturbed, however, it can ferociously strike back.
+|pearl      = It is docile and prefers to avoid conflict. If disturbed, however, it can ferociously strike back.
+|platinum   = It is docile and prefers to avoid conflict. If disturbed, however, it can ferociously strike back.
+|heartgold  = It usually hides in tall grass. Because it dislikes fighting, it protects itself by kicking up sand.
+|soulsilver = Common in grassy areas and forests, it is very docile and will chase off enemies by flapping up sand.
+|black      = It is docile and prefers to avoid conflict. If disturbed, however, it can ferociously strike back.
+|white      = It is docile and prefers to avoid conflict. If disturbed, however, it can ferociously strike back.
+|black 2 = It is docile and prefers to avoid conflict. If disturbed, however, it can ferociously strike back.
+|white 2 = It is docile and prefers to avoid conflict. If disturbed, however, it can ferociously strike back.
+}}
+
+=== Learnset ===
+==== Generation I ====
+{{Main|Pidgey/Learnset Generation I}}
+
+==== Generation II ====
+{{Main|Pidgey/Learnset Generation II}}
+
+==== Generation III ====
+{{Main|Pidgey/Learnset Generation III}}
+
+==== Generation IV ====
+{{Main|Pidgey/Learnset Generation IV}}
+
+==== Generation V ====
+{{Movessettop
+|backcolor={{Normal}}
+}}
+{{Movessetmid
+|1|'''[[Tackle]]'''|50|100|35|{{type|Normal}}|{{Damage Category|Physical}}
+}}
+{{Movessetmid
+|5|[[Sand-attack]]|-|100|15|{{type|Ground}}|{{Damage Category|Status}}
+}}
+{{Movessetmid
+|9|'''[[Gust]]'''|40|100|35|{{type|Flying}}|{{Damage Category|Special}}
+}}
+{{Movessetmid
+|13|'''[[Quick Attack]]'''|40|100|30|{{type|Normal}}|{{Damage Category|Physical}}
+}}
+{{Movessetmid
+|17|[[Whirlwind]]|-|100|20|{{type|Flying}}|{{Damage Category|Status}}
+}}
+{{Movessetmid
+|21|[[Twister]]|40|100|20|{{type|Dragon}}|{{Damage Category|Special}}
+}}
+{{Movessetmid
+|25|[[FeatherDance]]|-|100|15|{{type|Flying}}|{{Damage Category|Status}}
+}}
+{{Movessetmid
+|29|[[Agility]]|-|-|30|{{type|Psychic}}|{{Damage Category|Status}}
+}}
+{{Movessetmid
+|33|'''[[Wing Attack]]'''|60|100|35|{{type|Flying}}|{{Damage Category|Physical}}
+}}
+{{Movessetmid
+|37|[[Roost]]|-|-|10|{{type|Flying}}|{{Damage Category|Status}}
+}}
+{{Movessetmid
+|41|[[Tailwind]]|-|-|30|{{type|Flying}}|{{Damage Category|Status}}
+}}
+{{Movessetmid
+|45|[[Mirror Move]]|-|-|20|{{type|Flying}}|{{Damage Category|Status}}
+}}
+{{Movessetmid
+|49|'''[[Air Slash]]'''|75|95|20|{{type|Flying}}|{{Damage Category|Special}}
+}}
+{{Movessetmid
+|53|'''[[Hurricane]]'''|120|70|10|{{type|Flying}}|{{Damage Category|Special}}
+}}
+{{Movessetend
+|backcolor={{Normal}}
+}}
+
+== Origins ==
+Pidgey appears to be based off a [[Wikipedia:Columbidae|pigeon]].
+
+=== Name origins ===
+* '''Japanese''': ポッポ (Poppo in Romaji) from the Japanese onomatopoeic word poppo (ぽっぽ) which means coo.
+*'''English''': The name &quot;Pidgey&quot; is a play on the word &quot;''pigeon''&quot;, the name of a common bird.
+*'''French''': &quot;Roucool&quot; is a pun using the words &quot;''roucouler&quot; ''(to coo) and &quot;''cool&quot;'' (cool).
+
+==Trivia==
+*Pidgey are often seen flying in small flocks in the anime.
+*Pidgey is the first [[Pokémon]] in the [[National Pokédex]] order to have 2 abilities.
+*Pidgey is the first normal-type Pokémon in the National Pokédex.
+*Pidgey was officially going to be named &quot;Pidge&quot;.
+*Pidgey has the same cry as [[Jigglypuff]] except Pidgey's cry is a little lower.
+
+{{References|pidgey|016}}
+{{Family|[[File:016.gif|Is not evolved]][[File:017.gif|Evolves at lvl. 18]][[File:018.gif|Evolves at lvl. 36]]}}
+{{PokémonPrevNext|prev=Beedrill|next=Pidgeotto}}
+
+[[ca:Pidgey]]
+[[pl:Pidgey]]
+[[ru:Пиджи]]
+[[Category:Normal Pokémon]]
+[[Category:Flying Pokémon]]
+[[Category:Generation I Pokémon]]
+[[Category:Bird Pokémon]]
+[[Category:Pokémon]]
+[[Category:Basic Pokémon]]
+[[Category:Dual-Type Pokémon]]
+[[Category:Kanto Pokémon]]
+[[Category:Body style 09 Pokémon]]
+[[Category:Flying group Pokémon]]
+[[Category:Early route Pokémon]]</rev></revisions></page></pages></query></api>
