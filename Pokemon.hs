@@ -13,12 +13,14 @@ data Stat = Stats { hp :: Int
 
 -- | The type of a pokemon
 data Type = Normal | Flying
-            deriving (Eq, Show)
+            deriving (Eq, Show, Read)
 
 
 -- | Basic definition of a pokemon
 data Pokemon = Pokemon { name :: String
                        , types :: [Type] -- | Pokemon can have multiple types. 
                        , dex  :: Int -- | The national pokedex id
+                       , stats :: Stat
+                       , generation :: Int 
                        } deriving (Eq, Show)
 
