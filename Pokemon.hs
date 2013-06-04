@@ -31,6 +31,7 @@ data Type = Normal
           | Steel
           deriving (Eq, Show, Read, Ord)
 
+type Pokedex = [Pokemon]
 
 -- | Basic definition of a pokemon
 data Pokemon = Pokemon { name :: String
@@ -39,4 +40,8 @@ data Pokemon = Pokemon { name :: String
                        , stats :: Stat
                        , generation :: Int 
                        } deriving (Eq, Show, Read)
+
+instance Ord Pokemon where
+  p1 <= p2 = (dex p1) <= (dex p2)
+
 
