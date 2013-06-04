@@ -9,11 +9,27 @@ data Stat = Stats { hp :: Int
                   , sdef :: Int
                   , spd :: Int
                   , total :: Int
-                  } deriving (Eq, Show)
+                  } deriving (Eq, Show, Read)
 
 -- | The type of a pokemon
-data Type = Normal | Flying
-            deriving (Eq, Show, Read)
+data Type = Normal
+          | Fire
+          | Water
+          | Grass
+          | Electric
+          | Ice
+          | Fighting
+          | Poison
+          | Ground
+          | Flying
+          | Psychic
+          | Bug
+          | Rock
+          | Ghost
+          | Dragon
+          | Dark
+          | Steel
+          deriving (Eq, Show, Read, Ord)
 
 
 -- | Basic definition of a pokemon
@@ -22,5 +38,5 @@ data Pokemon = Pokemon { name :: String
                        , dex  :: Int -- | The national pokedex id
                        , stats :: Stat
                        , generation :: Int 
-                       } deriving (Eq, Show)
+                       } deriving (Eq, Show, Read)
 

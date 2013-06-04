@@ -1,5 +1,6 @@
-module PokeParser where
+module PokeParser (parsePokemon, parseMissing) where
 import Control.Monad (liftM)
+import Data.Char (toLower, toTitle)
 import Data.List (stripPrefix)
 import Data.Maybe
 import Pokemon -- contains the types
@@ -8,12 +9,19 @@ import Text.Regex.Base
 import Text.Regex.TDFA
 
 
--- | Parse the text and return the requested property (in String format)
+-- | Parse the text and return the requested property (in String
+  -- format)
+readProp :: String -> String -> String
 readProp text prop =
   head hits
   where 
-    (_, _, _, hits) = text =~ (prop ++ " * = *([^\n]+)") :: (String, String, String, [String])
-
+    (_, _, _, hits) = text =~ (propTrans ++ " * = *([^\n]+)") :: (String, String, String, [String])
+    -- The first letter could be capitalized or not. In both cases we
+    -- need to read it correctly.
+    propTrans = "[" ++ [small] ++ "|" ++ [big] ++ "]" ++ tail prop
+    firstLetter = head prop
+    small = toLower firstLetter
+    big = toTitle firstLetter
 
 -- | Parse the text and return a list of strings of the types of the
     -- pokemon.
@@ -22,7 +30,7 @@ readTypes text =
   -- filter out the /{{type|<some-type>}} elements
   map read $ filter ((/= '/') . head)  hits 
   where -- the structure of one type def
-    once =  "{{type\\|([^}]+)}}"
+    once =  "{{[t|T]ype\\|([^}]+)}}"
     (_, _, _, hits) = text =~ (once ++ "(/" ++ once ++ ")*" ):: (String, String, String, [String])
 
 
@@ -49,7 +57,10 @@ parsePokedexId text =
 parseGeneration :: String -> Int
 parseGeneration text =
   maybe 0 roman $ stripPrefix "Generation " $ removeTags $ readProp text "gen"
-  -- not the most clean solution, but it'll do for now
+  -- Not the most clean solution, but it'll do for now
+  -- There is a package called roman-numerals on hackage
+  -- (http://hackage.haskell.org/package/roman-numerals)
+  -- but it seems like overkill to demand yet more packages.
   where roman "I" = 1
         roman "II" = 2
         roman "III" = 3
@@ -58,6 +69,7 @@ parseGeneration text =
         roman "VI" = 6
 
 
+-- | parse the markup language and return a pokemon.
 parsePokemon :: String -> Pokemon
 parsePokemon text =
   Pokemon name types dex stats generation
@@ -66,3 +78,9 @@ parsePokemon text =
         dex = parsePokedexId text
         stats = parseStats text
         generation = parseGeneration text
+
+-- | look if the string contains the indication that the requested
+-- pokemon was not found.
+parseMissing :: String -> Bool
+parseMissing text =
+  text =~ "<page ns=\"0\""
