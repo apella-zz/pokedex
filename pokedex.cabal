@@ -18,7 +18,7 @@ synopsis:            An interface to pokemon.wikia.com for easy reasoning on you
 license:             BSD3
 
 -- The file containing the license text.
-license-file:        LICENSE
+-- license-file:        LICENSE
 
 -- The package author(s).
 author:              Bart Spiers
@@ -40,12 +40,21 @@ cabal-version:       >=1.8
 
 library
   -- Modules exported by the library.
-  exposed-modules:     PokeParser
+  exposed-modules:     Pokedex,
+                       TypeComparison,
+                       DataGrab,
+                       DataGrabLocal,
+                       PokedexGeneration
   
   -- Modules included in this library but not exported.
-  -- other-modules:       
+-- other-modules:       PokeParser
+  
   
   -- Other library packages from which modules are imported.
-  build-depends:       base >=4.5.*,
-                       regex-tdfa
+  build-depends:       base >=4.5.0,
+                       regex-tdfa >=1.1.8,
+                       regex-base,
+                       containers >=0.4.2.1,
+                       HTTP,
+                       filepath
   

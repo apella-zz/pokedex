@@ -1,16 +1,12 @@
-module Pokedex where
-import Data.List  (find)
+module Pokedex (module Pokemon,
+                module PokeCache,
+                module TypeComparison)
+                where
+import Data.List  (find, union)
 import Pokemon -- type definitions
-import System.IO (readFile)
-
--- | the file that contains the pokedex list of pokemon already
--- downloaded. By keeping them on the hard drive we don't overuse
--- the wiki's bandwidth and speed up the process
-pokedexFile :: String
-pokedexFile = "./pokeCache.hs"
-
-readPokedex :: IO Pokedex
-readPokedex = readFile pokedexFile >>= return . (read :: String -> [Pokemon])
+import TypeComparison (typeMap, DamageMult)
+import PokeCache
+import qualified Data.Map as M (Map, fromList, lookup, mapMaybeWithKey, elems) 
 
 -- | Get a pokemon based on its name
 getPokemon :: String -> Pokedex -> Maybe Pokemon
@@ -21,8 +17,47 @@ getPokemon pokemon pokedex = find (((==) pokemon) . name) pokedex
 
 -- | Get all the pokemon of a given type
 getType :: Type -> Pokedex -> Pokedex
-getType t  = 
-  filter ((elem t) . types)
+getType t = filter ((elem t) . types)
+
+-- | What types have a weak defense against the given type?
+weakDefenseAgainst :: Type -> [(Type, DamageMult)]
+weakDefenseAgainst t = getTypesAccordingTo (\(a, d) v -> if (t == a) && (v > 1) then Just (d,v) else Nothing)
+
+-- | What types have a strong defense against the given type?
+strongDefenseAgainst :: Type -> [(Type, DamageMult)]
+strongDefenseAgainst t = getTypesAccordingTo (\(a, d) v -> if (t == a) && (v < 1) then Just (d,v) else Nothing)
+
+
+-- | Higher order function for getting info on types
+getTypesAccordingTo :: ((Type, Type) -> DamageMult -> Maybe a) -> [a]
+getTypesAccordingTo fun = M.elems $ M.mapMaybeWithKey fun typeMap
+
+-- | Return the effectiveness of @t1@ 'against' @t2@
+against ::  Type -> Type -> DamageMult
+t1 `against` t2 = maybe 1 id $ M.lookup (t1, t2) typeMap
+
+-- | What types will do poor against the given type?
+weakOffenseAgainst :: Type -> [(Type, DamageMult)]
+weakOffenseAgainst t = getTypesAccordingTo (\(a, d) v -> if (t == d) && (v < 1) then Just (a, v) else Nothing)
+
+-- | What types will to well against the given type?
+strongOffenseAgainst :: Type -> [(Type, DamageMult)]
+strongOffenseAgainst t = getTypesAccordingTo (\(a, d) v -> if (t == d) && (v > 1) then Just (a,v) else Nothing)
+
+-- | Get all the types that have a multiplier against the given type
+offenseAgainst :: Type -> [(Type, DamageMult)]
+offenseAgainst t = getTypesAccordingTo (\(a, d) v -> if (t == d) then Just (a,v) else Nothing)
+
+-- | Get all the types that have a multiplier against the given type
+defenseAgainst :: Type -> [(Type, DamageMult)]
+defenseAgainst t = getTypesAccordingTo (\(a, d) v -> if (t == a) then Just (d,v) else Nothing)
+
+-- | Get all the relevant types and their multipliers for attacking
+-- the given pokemon
+describeDefender :: Pokemon -> [(Type, DamageMult)]
+describeDefender =
+  foldr union [] .  map offenseAgainst . types
+
 
 {- Commented out. The pokedex can be found in pokeCache.hs.
    We can't simply use the wiki because some pokemon don't have their

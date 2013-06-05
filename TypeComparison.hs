@@ -1,15 +1,17 @@
 -- | provides methods to see what types of attacks are effective
 -- against what and what defenses are good against what
-module TypeComparison (strongAttackAgainst, strongDefenseAgainst, against) where
+module TypeComparison (weakDefenseAgainst, strongDefenseAgainst, against, getTypesAccordingTo, typeMap, DamageMult) where
 import Pokemon
+import Data.List (union)
 import qualified Data.Map as M (Map, fromList, lookup, mapMaybeWithKey, elems) 
 
--- | get the types where attacks of this type will do twice the damage against
-strongAttackAgainst :: Type -> [Type]
-strongAttackAgainst t = getTypesAccordingTo (\(a, d) v -> if (t == a) && (v > 1) then Just d else Nothing)
+type DamageMult = Double
 
--- | get the types where attacks of this type will do little or no
--- damage against
+-- | What types have a weak defense against the given type?
+weakDefenseAgainst :: Type -> [Type]
+weakDefenseAgainst t = getTypesAccordingTo (\(a, d) v -> if (t == a) && (v > 1) then Just d else Nothing)
+
+-- | What types have a strong defense against the given type?
 strongDefenseAgainst :: Type -> [Type]
 strongDefenseAgainst t = getTypesAccordingTo (\(a, d) v -> if (t == a) && (v < 1) then Just d else Nothing)
 
@@ -22,10 +24,22 @@ getTypesAccordingTo fun = M.elems $ M.mapMaybeWithKey fun typeMap
 against ::  Type -> Type -> Double
 t1 `against` t2 = maybe 1 id $ M.lookup (t1, t2) typeMap
 
+-- | What types will do poor against the given type?
+weakOffenseAgainst :: Type -> [Type]
+weakOffenseAgainst t = getTypesAccordingTo (\(a, d) v -> if (t == d) && (v < 1) then Just a else Nothing)
+
+-- | What types will to well against the given type?
+strongOffenseAgainst :: Type -> [Type]
+strongOffenseAgainst t = getTypesAccordingTo (\(a, d) v -> if (t == d) && (v > 1) then Just a else Nothing)
+
+describeDefender :: Pokemon -> [Type]
+describeDefender =
+  foldr union [] .  map strongDefenseAgainst . types
+
 -- | A map containing the multipliers for attack types.
 --   If it's not in the map, the multiplier is 1.
 --   Structure: ((Attacker, Defender), multiplier)
-typeMap :: M.Map (Type, Type) Double
+typeMap :: M.Map (Type, Type) DamageMult
 typeMap = M.fromList [((Normal, Rock), 0.5)
                    ,((Normal, Ghost), 0)
                    ,((Normal, Steel), 0.5)
